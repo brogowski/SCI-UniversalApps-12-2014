@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>4d089dc7-ed31-4beb-a474-67659839a07a</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SCI.App</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\ApplicationState\SateManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\DataAccess\ApiWallRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\DataAccess\JsonWallEntryConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\Device\ImageHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\Device\OrientationChangeHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\Device\PhotoDevice.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\Device\PreviewOrientationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\Device\StorageProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\Resources\ResourcesLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\ThreadHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Adapters\UserInfo\UserNameProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ImageHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\AddEntry.xaml.cs">
+      <DependentUpon>AddEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BasePage.xaml.cs">
+      <DependentUpon>BasePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\CameraEntry.xaml.cs">
+      <DependentUpon>CameraEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Controls\BackButton.xaml.cs">
+      <DependentUpon>BackButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Converters\Base64ToBitmapConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TemplateSelectors\WallEntryTemplateSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TextEntry.xaml.cs">
+      <DependentUpon>TextEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Wall.xaml.cs">
+      <DependentUpon>Wall.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Views\AddEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\BasePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\CameraEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Controls\BackButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\TextEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\Wall.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\pl-PL\Resources.resw" />
+  </ItemGroup>
+</Project>
